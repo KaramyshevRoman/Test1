@@ -1,0 +1,21 @@
+import static org.junit.Assert.*;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+
+public class TestsTest {
+
+	@BeforeClass
+	public void launch()
+	{
+		System.out.println("BeforeClassLaunch");
+		Tests.PremiumPageOpeningTest();
+	}
+	
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

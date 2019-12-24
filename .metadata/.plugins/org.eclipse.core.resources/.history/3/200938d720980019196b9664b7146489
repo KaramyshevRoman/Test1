@@ -1,0 +1,49 @@
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.testng.annotations.AfterClass;
+
+
+public class TestsTest {
+
+	private Tests test;
+
+	@BeforeClass
+	public static void launch()
+	{
+		System.out.println("BeforeClassLaunch");
+	}
+	@AfterClass
+	public void Closing(){
+	System.out.println("closing");
+	Methods.tearDown();
+	}
+	
+	@Before
+	public void init (){
+		test = new Tests();
+	}
+	
+	@After
+	public void nulling(){
+		test = null;
+	} 
+	
+	
+	
+	@Test
+	public void testPremium()throws Exception {
+		
+		assertFalse(Tests.PremiumPageOpeningTest());
+		
+		
+		//fail("Not yet implemented");
+	}
+
+	
+
+	
+}

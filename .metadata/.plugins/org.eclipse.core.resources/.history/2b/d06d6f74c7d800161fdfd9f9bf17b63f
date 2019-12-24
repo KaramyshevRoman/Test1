@@ -1,0 +1,89 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+public class ClassMain {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+	//System.setProperty("webdriver.chrome.driver", "D:\\Eclipse\\chromedriver\\chromedriver.exe");
+		//Tests.PremiumPageOpeningTest();
+		//Tests.LocalRadioOpeningTest();
+		
+		//Methods.setUp("http://stage-beta.tunein.com/");
+		//Methods.click("//*[@id='sidebarNav-local']/div/span/div/div/div", "xpath");
+		//Thread.sleep(500);
+		//Methods.click("//*[@id='container-0']/div[3]/div/div", "xpath");
+		
+		/*
+		int m =1;
+		for (int i =1; i < 10; i++) {
+			m=m*i;
+			
+			
+		}
+		System.out.println(m);
+		*/
+		
+		int maxKolvo = 0;
+		int kolvoElementov = 0;
+		int stroka = 0;
+		int temp = 0;
+		int[][] Array = {
+				{1,2,3,4,5},
+				{2,1,23,4,5},
+				{1,2,3,0,-6},
+				{3,3,3,3,3}
+				};
+		
+		for (int i=1; i<Array.length; i++){
+			temp = 0;
+			kolvoElementov = 0;
+			for (int j=1;j<Array.length;j++){
+			
+				if (Array[i][j]==Array[i-1][j-1]){
+				kolvoElementov++;	
+				}	
+			}
+			if (maxKolvo < kolvoElementov){
+				maxKolvo = kolvoElementov;
+				stroka = i;
+			}
+			
+		}
+		
+		System.out.println("stroka = "+stroka);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*
+		Methods.setUp("http://stage-beta.tunein.com");
+		Methods.click("//*[@id='sidebarNav-premium']/div/span/div/div/div", "xpath");
+		
+		Methods.isElementPresent("#content > div > div > div.app__app___3d5HQ > div.container > div > div:nth-child(1) > h1", "css");
+		
+		
+		if (Methods.element.getText().equals("Premium")){
+			System.out.println(Methods.element.getText());
+			System.out.println("test passed");
+		}
+		else {
+			System.out.println("test failed");
+		}
+		Methods.tearDown();
+		//Methods.tearDown();
+		
+		//Methods.log = "p@a.com";
+		//Methods.pass = "Azerty12";
+		//Methods.loginTest();
+		//Methods.tearDown();
+		 * 
+		 */
+	}
+
+}
+ 

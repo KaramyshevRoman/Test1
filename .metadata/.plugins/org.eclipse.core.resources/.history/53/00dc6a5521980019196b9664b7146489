@@ -1,0 +1,51 @@
+
+public class Tests {
+
+	public static boolean PremiumPageOpeningTest () throws InterruptedException{
+		Methods.setUp("http://stage-beta.tunein.com");
+		Methods.click("//*[@id='sidebarToggle']", "xpath");
+		Methods.click("//*[@data-testid='premiumMenuItem']", "xpath");
+	
+		if (Methods.element!=null){
+			System.out.println(Methods.element.getText()+" -element present~!");
+		}
+		
+		
+		if (Methods.element.getText().equals("Premium")){
+				System.out.println(Methods.element.getText());
+				System.out.println("test passed");
+				
+				
+				return true;
+				
+		}
+			else {
+				System.out.println("test failed");
+			}
+		
+			return false;
+		/*
+		Methods.tearDown();
+		Thread.sleep(100);
+		*/
+	}
+		/*
+		public static void LocalRadioOpeningTest () throws InterruptedException{
+			Methods.setUp("http://stage-beta.tunein.com");
+			Methods.click("sidebarNav-local", "id");
+			
+			Methods.isElementPresent("##content > div > div > div.app__app___3d5HQ > div.container > div > div:nth-child(1) > h1", "css");
+			
+			
+			if (Methods.element.getText().equals("Premium")){
+				System.out.println(Methods.element.getText());
+				System.out.println("test passed");
+			}
+			else {
+				System.out.println("test failed");
+			}
+			Methods.tearDown();
+			Thread.sleep(500);
+		}
+		 */
+}
